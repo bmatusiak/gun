@@ -1,0 +1,27 @@
+<html>
+
+<body>
+
+  <script src="/gun/examples/jquery.js"></script>
+
+  <script data-main="requirejs-config" src="/require.js"></script>
+
+  <!--<script src="/gun/lib/webrtc.js"></script>-->
+  <script>
+    require([
+
+      '/gunjs/src/index.js',
+
+      '/gunjs/sea/index.js',
+      '/gunjs/sea/create.js'
+      
+      //,'/gunjs/lib/webrtc.js' //<--  has bug loading BUILT version
+    ], function(Gun) {
+
+      var gun = Gun();
+      
+    });
+  </script>
+</body>
+
+</html>
