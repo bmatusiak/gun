@@ -1,4 +1,5 @@
 <html>
+
 <body>
   <script src="/gun/examples/jquery.js"></script>
   <script data-main="requirejs-config" src="/require.js"></script>
@@ -9,15 +10,23 @@
 
       '/gunjs/sea/index.js',
       '/gunjs/sea/create.js',
+      '/gunjs/sea/pair.js',
+      '/gunjs/sea/secret.js',
       
-      '/gunjs/lib/webrtc.js'
-      
-    ], function(Gun) {
 
-      var gun = Gun();
-      
-    });
+      '/gunjs/lib/webrtc.js',
+
+      '/gunjs/examples/requirejs/public/onlykey/main.js'
+
+
+    ], function() {});
   </script>
+
+  Action: <select id="action"></select>
+  <br/>
+  <br/>
+  <button id="doRun">run</button>
+  <h2>open console for results</h2>
 </body>
 
 </html>
