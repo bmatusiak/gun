@@ -7,8 +7,8 @@ var port = process.env.PORT || 8765;
 var https = require('https');
 var http = require('http');
 var express = require('express');
-var Gun = require('gun');
-require('gun/axe');
+var Gun = require(GUNDIR+'/gun');
+require(GUNDIR+'/axe');
 
 var app = express();
 app.use(express.static(__dirname + "/public"));
