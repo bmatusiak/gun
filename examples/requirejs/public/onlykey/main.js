@@ -79,12 +79,24 @@ actions.testSEA = async function() {
     
     //create pair
     var pair = await SEA.pair();
+    /*{   
+        pub: "P9Wx0baqpgHmdyKezF-tn5syUnFVKu12e3FA-cxidLU.KNcaxL7cKTrZfLjyuCM5BU7wc9lzzTh5b0f3JajO_20", 
+        priv: "j2IYom_Geq-muPdcnr6x_KbQDDqAkfCawApwwKroUDY", 
+        epub: "fnVHAK7PB4JqjAX7iMs50sqJcZQSzTBSQtbEJAsrTZg.Qac_MWXZkGoWm0hp52vbSKqMDI86tC191Ih1tLUv_So", 
+        epriv: "FC6ZfFoAsntS3U48wiRG4Ro3t0sg3m6K9xoch-ldpOM"
+    }*/
     
     //encrypt some data with that pair
     var enc = await SEA.encrypt('hello self', pair);
+    /*
+    SEA{"ct":"lKcB9zPA6U1zPKIJHOgKHMDEgY5ymCrCI60=","iv":"QkDkV5+NLcM+fQdbsa0p","s":"AVzj0oLIEcrQ"}
+    */
     
     //sign encrypted data
     var data = await SEA.sign(enc, pair);
+    /*
+    SEA{"m":{"ct":"lKcB9zPA6U1zPKIJHOgKHMDEgY5ymCrCI60=","iv":"QkDkV5+NLcM+fQdbsa0p","s":"AVzj0oLIEcrQ"},"s":"pL5Xc+NJ+ZuSLJ46yBOKzuNy/9567hukedL8yq7ZgY44fvdyjXUDPF2QCWQBKSF3rBMNZVxg//2kC9AnOF/PmA=="}
+    */
     
     console.log(data);
     
