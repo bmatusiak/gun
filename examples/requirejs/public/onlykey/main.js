@@ -107,7 +107,7 @@ actions.testSEA = async function() {
     enc = await SEA.encrypt('shared data', await SEA.secret(david.epub, charlie));
     dec = await SEA.decrypt(enc, await SEA.secret(charlie.epub, david));
     
-    console.log(enc == dec);
+    console.log(dec, enc);
     // `.secret` is Elliptic-curve Diffie–Hellman
 };
 
