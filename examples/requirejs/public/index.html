@@ -6,17 +6,23 @@
   <script>
     require([
 
-      '/gunjs/src/index.js',
-
-      '/gunjs/sea/index.js',
-      '/gunjs/sea/create.js',
-      '/gunjs/sea/pair.js',
-      '/gunjs/sea/secret.js',
+      
+      '/gunjs/src/adapters/websocket.js',
+      //'/gunjs/src/adapters/websocket',
+      '/gunjs/src/on',
+      
+      // '/gunjs/src/adapters/localStorage.js',
+      // '/gunjs/src/adapters/mesh.js',
+      
+      '/gunjs/sea/index',
+      '/gunjs/sea/create',
+      '/gunjs/sea/pair',
+      '/gunjs/sea/secret',
       
 
-      '/gunjs/lib/webrtc.js',
+      '/gunjs/lib/webrtc',
 
-      '/gunjs/examples/requirejs/public/onlykey/main.js'
+      '/gunjs/examples/requirejs/public/onlykey/main'
 
 
     ], function() {});
