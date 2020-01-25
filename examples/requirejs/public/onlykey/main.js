@@ -15,6 +15,8 @@ var ctaphid = require("./ctaphid");
 var constants = require("./constants");
 
 
+var onlykey_api = require("./onlykey");
+
 var actions = {};
 
 
@@ -37,6 +39,10 @@ $(document).ready(function() {
     });
 });
 
+
+actions.ok_test = async function(){
+    if(onlykey_api && typeof onlykey_api.test == "function") onlykey_api.test();
+};
 
 actions.version = async function() {
     await ctaphid.ctaphid_via_webauthn(

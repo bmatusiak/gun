@@ -29,6 +29,7 @@ module.exports = function(commonDir) {
         var path = commonDir + req.url;
         function done(data){
             if(data){
+                //res.setHeader('content-type', 'text/javascript');
                 res.send(wrapCommon(data));
             }else next();
         }

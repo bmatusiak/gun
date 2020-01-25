@@ -1,31 +1,35 @@
 <html>
 
 <body>
-  <script src="/gun/examples/jquery.js"></script>
-  <script data-main="requirejs-config" src="/require.js"></script>
+  <script src="./gun/examples/jquery.js"></script>
+  <script data-main="requirejs-config" src="./require.js"></script>
   <script>
     require([
 
       
-      '/gunjs/src/adapters/websocket.js',
+      './gunjs/src/adapters/websocket.js',
       //'/gunjs/src/adapters/websocket',
-      '/gunjs/src/on',
+      './gunjs/src/on',
       
       // '/gunjs/src/adapters/localStorage.js',
       // '/gunjs/src/adapters/mesh.js',
       
-      '/gunjs/sea/index',
-      '/gunjs/sea/create',
-      '/gunjs/sea/pair',
-      '/gunjs/sea/secret',
+      './gunjs/sea/index',
+      './gunjs/sea/create',
+      './gunjs/sea/pair',
+      './gunjs/sea/secret',
       
 
-      '/gunjs/lib/webrtc',
-
-      '/gunjs/examples/requirejs/public/onlykey/main'
+      './gunjs/lib/webrtc',
 
 
-    ], function() {});
+      './commonify/onlykey/main'
+
+      
+
+    ], function() {
+      
+    });
   </script>
 
   Action: <select id="action"></select>

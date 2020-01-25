@@ -11,8 +11,18 @@ var Gun = require(GUNDIR+'/gun');
 require(GUNDIR+'/axe');
 
 var app = express();
-app.use(express.static(__dirname + "/public"));
+
 app.use("/gun/examples",express.static(GUNDIR + "/examples"));
+
+var commonify = require(__dirname+ "/commonify.js");
+app.use('/gunjs/', commonify(GUNDIR));
+app.use('/commonify/', commonify(__dirname+ "/public"));
+
+app.use('/',express.static(__dirname+ "/public"));
+
+
+
+
 
 var commonify = require("./commonify.js");
 app.use('/gunjs/', commonify(GUNDIR));
